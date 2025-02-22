@@ -30,7 +30,7 @@
       productId: "005",
       name: "Headset Gamer",
       price: 400.0,
-      quantity: 1,
+      quantity: 3,
     },
   ];
 
@@ -57,7 +57,7 @@ Calcule o preço total do carrinho multiplicando o price de cada produto pela su
 ### Exercício 3: Listar os nomes dos produtos no carrinho
 Liste os nomes de todos os produtos no carrinho.
 */
-  let nameList = [{}];
+  let nameList = [];
   for (let index = 0; index < items.length; index++) {
     nameList.push(items[index].name);
   }
@@ -66,13 +66,13 @@ Liste os nomes de todos os produtos no carrinho.
 ### Exercício 4: Filtrar produtos que têm quantidade maior que 1
 Filtre os produtos que possuem quantidade maior que 1.
 */
-  let quantityFilter;
+  const filtredProducts = [];
   for (let index = 0; index < items.length; index++) {
     if (items[index].quantity > 1) {
-      quantityFilter = items[index];
+      filtredProducts.push(items[index]);
     }
   }
-  console.log(quantityFilter);
+  console.log(filtredProducts);
 
   /*
 ### Exercício 5: Verificar se o carrinho tem algum produto com preço superior a 2000
